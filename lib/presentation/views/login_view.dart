@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_overlay/loading_overlay.dart';
-
 import 'package:test_task/configurations/frontend_configs.dart';
 import 'package:test_task/infrastructure/services/login_services.dart';
-
 import '../common/common_button_widget.dart';
 import '../common/textfieldwidget.dart';
-
 
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);
@@ -50,7 +46,7 @@ class _LoginViewState extends State<LoginView> {
             ),
             Text("Sign in.",
                 style: GoogleFonts.inter(
-                  // fontFamily: 'Gilroy',
+                    // fontFamily: 'Gilroy',
                     fontWeight: FontWeight.w600,
                     fontSize: 26)),
             const SizedBox(
@@ -75,7 +71,7 @@ class _LoginViewState extends State<LoginView> {
                 onTap: () async {
                   makeLoadingTrue();
                   authServices.LoginUser(context, _emailController.text,
-                      _passwordController.text)
+                          _passwordController.text)
                       .whenComplete(() async {
                     makeLoadingFalse();
                   });

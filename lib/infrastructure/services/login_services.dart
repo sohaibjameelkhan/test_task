@@ -1,7 +1,5 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
@@ -42,7 +40,9 @@ class AuthServices {
 
     if (response.statusCode == 200) {
       if (statusofApi == 200) {
+        ///declared a variable to get token from api
         var token = decodeData['data']['access_token'];
+        ///setting a token in shared perefernce for session handling
         SharedPreferences sharedPreferences =
             await SharedPreferences.getInstance();
         sharedPreferences.setString("token", token);
@@ -50,6 +50,7 @@ class AuthServices {
           Get.to(HomeView());
         });
       } else {
+        ///custom dialog for showing error messages
         CustomDialog.customDialog(context, metaMessage);
       }
     } else {

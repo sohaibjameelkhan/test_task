@@ -1,8 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
-
 import 'package:flutter/material.dart';
-
 import 'package:http/http.dart' as http;
 import 'package:test_task/configurations/url_configs.dart';
 
@@ -23,6 +21,7 @@ class PostServices {
       } else {
         throw "wrong";
       }
+      ///checking internet connection
     } on SocketException catch (e) {
       showDialog(
           context: context,
