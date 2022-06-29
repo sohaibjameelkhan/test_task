@@ -84,6 +84,7 @@ class _HomeViewState extends State<HomeView> {
                             child: Container(
                               height: 150,
                               width: 300,
+
                               child: Card(
                                 elevation: 6,
                                 shape: RoundedRectangleBorder(
