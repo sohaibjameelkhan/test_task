@@ -82,6 +82,7 @@ class _HomeViewState extends State<HomeView> {
                             padding: const EdgeInsets.only(
                                 bottom: 5, left: 12, right: 12),
                             child: Container(
+
                               height: 150,
                               width: 300,
 
