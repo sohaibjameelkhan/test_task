@@ -8,7 +8,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:test_task/configurations/url_configs.dart';
 import 'package:test_task/presentation/views/home_view.dart';
 import '../../presentation/common/custom_dialog.dart';
-import '../../presentation/helper/error_handling.dart';
+
+import '../helper/error_handling.dart';
 import '../models/login_model.dart';
 
 class AuthServices {

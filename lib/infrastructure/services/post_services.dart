@@ -21,6 +21,7 @@ class PostServices {
       } else {
         throw "wrong";
       }
+
       ///checking internet connection
     } on SocketException catch (e) {
       showDialog(
